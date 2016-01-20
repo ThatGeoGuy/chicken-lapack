@@ -7,9 +7,9 @@
 (define (atlas-try-compile header ldflags)
   (and (try-compile
 	(string-append "#include <stdlib.h>\n"
-	               "#include " header "\n"
-		       "int main() { clapack_sgetrf(0, 0, 0, NULL, 0, NULL) ; return 0; }\n")
-	ldflags: ldflags)
+                 "#include " header "\n"
+                 "int main() { clapack_sgetrf(101, 0, 0, NULL, 0, NULL) ; return 0; }\n")
+  ldflags: ldflags)
        ldflags ))
 
 
